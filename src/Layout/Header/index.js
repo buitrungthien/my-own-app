@@ -4,6 +4,7 @@ import './styles.scss';
 const header = props => {
     return (
         <header className='header'>
+            <input></input>
             <nav>
                 Header
             </nav>

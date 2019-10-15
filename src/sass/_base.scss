@@ -1,8 +1,8 @@
 :root {
     // COLOR VARIABLES
     --primary-background-color: #ccc;
-    --box-shadow: 0 3px 7px rgba(107, 87, 87, 0.7);
-    --primary-font-color: rgb(43, 38, 38);
+    --box-shadow: 0 7px 7px rgb(185, 174, 110, 0.7);
+    --primary-font-color: aliceblue;
 
     //FONT VARIABLES
     --primary-font: 'Nunito', sans-serif;
@@ -43,7 +43,7 @@ body {
 .container {
     display: grid;
     grid-template-rows: 4.8rem calc(100vh - 4.8rem);
-    grid-template-columns: [sidebar-start] 24.5rem [sidebar-end content-start] 1fr [content-end];
+    grid-template-columns: [sidebar-start] minmax(min-content, 30rem) [sidebar-end content-start] 1fr [content-end];
 
     font-size: 4rem;
     color: white;

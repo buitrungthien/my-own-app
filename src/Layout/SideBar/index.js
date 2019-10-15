@@ -1,13 +1,14 @@
 import React from 'react';
+import Avatar from '../../Components/Avatar';
+import SideBarNav from '../../Components/SideBarNav';
+import CollapseButton from '../../Components/CollapseButton';
 import './styles.scss';
 
 const sideBar = props => (
     <nav className='sidebar'>
-        SideBar
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
+        <CollapseButton/>
+        <Avatar/>
+        <SideBarNav/>
     </nav>
 );
 
