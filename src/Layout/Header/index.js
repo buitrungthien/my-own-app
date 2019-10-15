@@ -1,13 +1,11 @@
 import React from 'react';
+import Search from '../../Components/Search';
 import './styles.scss';
 
 const header = props => {
     return (
         <header className='header'>
-            <input></input>
-            <nav>
-                Header
-            </nav>
+            <Search/>
         </header>
     );
 };

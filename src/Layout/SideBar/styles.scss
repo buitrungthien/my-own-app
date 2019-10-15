@@ -1,11 +1,10 @@
 .sidebar {
-    grid-row: 1 / -1;
-    grid-column: sidebar-start / sidebar-end;
-
     background: linear-gradient(to bottom, #5F6189, #D17D70);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    grid-row: 1 / -1;
+    grid-column: sidebar-start / sidebar-end;
 }

@@ -1,6 +1,8 @@
 .header {
     grid-row: 1 / 2;
     grid-column: 2 / -1;
-
-    background-color: orangered;
+    background-color: var(--light-gray-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

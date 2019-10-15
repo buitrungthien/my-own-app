@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding: 3rem 0;
     font-size: 1.9rem;
 
     &__shape-box {
         width: 25rem;
         height: 25rem;
-        clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+        border-radius: 50%;
+        overflow: hidden;
 
         img {
             height: 100%;
