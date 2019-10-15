@@ -1,0 +1,6 @@
+.content {
+    display: grid;
+    grid-template-columns: [full-start] minmax(7.8rem, 1fr) repeat(4, [col-start] minmax(min-content, 24.1rem) [col-end]) minmax(7.8rem, 1fr) [full-end];
+
+    background-color: rebeccapurple;
+}
