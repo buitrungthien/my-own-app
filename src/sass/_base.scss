@@ -43,8 +43,8 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 6rem calc(100vh - 4.8rem);
-    grid-template-columns: [sidebar-start] minmax(min-content, 30rem) [sidebar-end content-start] 1fr [content-end];
+    grid-template-rows: 6rem;
+    grid-template-columns: [sidebar-start] 30rem [sidebar-end content-start] 1fr [content-end];
 
     font-size: 4rem;
     color: white;

@@ -1,15 +1,14 @@
 .sidebar {
 
     &__nav {
-        font-size: 2rem;
+        font-size: 1.7rem;
         list-style: none;
 
         &__item:not(:last-of-type) {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         &__item {
-            padding: .5rem 2rem;
             position: relative;
             z-index: 2;
             
@@ -31,23 +30,30 @@
                 transform: scaleY(1);
                 width: 100%;
             }
+
+            &:active {
+                
+                &::before {
+                    background-color: darken(rgba(255, 0, 0, 0.692), 30%);
+                }
+            }
         }
 
         &__icon {
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
             fill: currentColor;
             margin-right: 2rem;
         }
 
         &__link:link,
         &__link:visited {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
             color: currentColor;
             text-decoration: none;
             text-transform: uppercase;
+            padding: 1.5rem 3rem;
+            display: flex;
+            align-items: center;
         }
     }
 }
