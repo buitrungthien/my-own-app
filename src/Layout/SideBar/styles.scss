@@ -1,9 +1,33 @@
 .sidebar {
-    background: linear-gradient(to bottom, #5F6189, #D17D70);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: fixed;
-    width: 30rem;
+    background-color: var(--lightest-gray);
+    font-size: 1.6rem;
+    position: sticky;
     height: 100vh;
+    top: 0;
+    left: 0;
+    flex-basis: 20vw;
+    max-width: 30rem;
+
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    grid-template-rows: min-content 1fr;
+    column-gap: 3rem;
+
+    &__left-vertical-bar {
+        background-color: var(--light-gray);
+        grid-row: 2 / -1;
+        grid-column: 1 / 2;
+    }
+}
+
+.brand-name {
+    background-color: #3B82EA;
+    text-transform: uppercase;
+    color: var(--primary-font-color);
+    padding: 3rem 0;
+    grid-column: 1 / -1;
+    text-align: center;
+    grid-row-start: 1;
+    font-weight: bold;
+    font-size: 2rem;
 }

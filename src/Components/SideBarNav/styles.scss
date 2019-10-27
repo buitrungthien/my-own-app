@@ -1,12 +1,10 @@
 .sidebar {
 
     &__nav {
-        font-size: 1.7rem;
         list-style: none;
-
-        &__item:not(:last-of-type) {
-            margin-bottom: 2rem;
-        }
+        color: var(--font-color-dark);
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
 
         &__item {
             position: relative;
@@ -37,13 +35,17 @@
                     background-color: darken(rgba(255, 0, 0, 0.692), 30%);
                 }
             }
+
+            &:hover, &:active {
+                color: var(--primary-font-color);
+            }
         }
 
         &__icon {
             width: 2.5rem;
             height: 2.5rem;
             fill: currentColor;
-            margin-right: 2rem;
+            justify-self: center;
         }
 
         &__link:link,
@@ -51,9 +53,11 @@
             color: currentColor;
             text-decoration: none;
             text-transform: uppercase;
-            padding: 1.5rem 3rem;
-            display: flex;
-            align-items: center;
+            padding: 1.5rem 0;
+            display: grid;
+            grid-template-columns: 6rem 1fr;            
+            column-gap: 3rem;
+            justify-items: start;
         }
     }
 }

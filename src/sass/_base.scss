@@ -1,8 +1,11 @@
 :root {
     // COLOR VARIABLES
-    --primary-background-color: #ccc;
+    --primary-background-color: #05121B;
+    --light-gray: rgb(20, 33, 42);
+    --lightest-gray: #1B2831;
     --box-shadow: 0 7px 7px rgb(185, 174, 110, 0.7);
-    --primary-font-color: aliceblue;
+    --primary-font-color: white;
+    --font-color-dark: #BFC4C5;
     --light-gray-1: rgb(150, 139, 139);
 
     //FONT VARIABLES
@@ -42,12 +45,21 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-rows: 6rem;
-    grid-template-columns: [sidebar-start] 30rem [sidebar-end content-start] 1fr [content-end];
+    display: flex;
 
     font-size: 4rem;
     color: white;
+    height: 200rem;
+    background-color: var(--primary-background-color);
+}
+
+.right-content {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 6rem 1fr;
+    grid-template-columns: [full-start] repeat(auto-fit, minmax(20rem, 1fr)) ;
+    padding: 1.5rem;
+    gap: 1.5rem;
 }
 
 button {

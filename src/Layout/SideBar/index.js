@@ -6,8 +6,12 @@ import './styles.scss';
 
 const sideBar = props => (
     <nav className='sidebar'>
-        <CollapseButton/>
-        <Avatar/>
+        {/* <CollapseButton/> */}
+        {/* <Avatar/> */}
+        <div className='brand-name'>
+            Awesome App
+        </div>
+        <div className='sidebar__left-vertical-bar'></div>
         <SideBarNav/>
     </nav>
 );
