@@ -4,7 +4,7 @@ import './styles.scss';
 const content = props => {
     return (
         <main className='content'>
-            Content
+            { props.children}
         </main>
     );
 };

@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './Layout/Header';
 import SideBar from './Layout/SideBar';
-// import Content from './Layout/Content';
+import Content from './Layout/Content';
+import Statuses from './Components/Statuses';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <SideBar />
       <div className='right-content'>
         <Header />
-        {/* <Content /> */}
+        <Content>
+          <Statuses />
+        </Content>
       </div>
     </div>
   );

@@ -10,8 +10,7 @@
 
     display: grid;
     grid-template-columns: 6rem 1fr;
-    grid-template-rows: min-content 1fr;
-    column-gap: 3rem;
+    grid-template-rows: 8rem 1fr;
 
     &__left-vertical-bar {
         background-color: var(--light-gray);
@@ -24,10 +23,12 @@
     background-color: #3B82EA;
     text-transform: uppercase;
     color: var(--primary-font-color);
-    padding: 3rem 0;
     grid-column: 1 / -1;
     text-align: center;
     grid-row-start: 1;
     font-weight: bold;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

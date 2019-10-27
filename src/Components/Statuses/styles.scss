@@ -1,0 +1,6 @@
+.statuses {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 12vw;
+}

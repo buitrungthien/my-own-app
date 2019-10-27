@@ -56,9 +56,9 @@ body {
 .right-content {
     width: 100%;
     display: grid;
-    grid-template-rows: 6rem 1fr;
-    grid-template-columns: [full-start] repeat(auto-fit, minmax(20rem, 1fr)) ;
+    grid-template-rows: 8rem 1fr;
     padding: 1.5rem;
+    padding-top: 0;
     gap: 1.5rem;
 }
 
