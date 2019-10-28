@@ -1,9 +1,9 @@
 .content {
     display: grid;
-    background-color: palegoldenrod;
     grid-column: 1 / -1;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 1.5rem;
+    align-content: start;
 }

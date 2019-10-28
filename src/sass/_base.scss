@@ -6,7 +6,11 @@
     --box-shadow: 0 7px 7px rgb(185, 174, 110, 0.7);
     --primary-font-color: white;
     --font-color-dark: #BFC4C5;
-    --light-gray-1: rgb(150, 139, 139);
+    --low-priority-color: #553EF1;
+    --high-priority-color: #E8354B;
+    --done-color: #7CC655;
+    --light-border: solid 1px rgb(73, 72, 72);
+    --table-hover-color: rgba(211, 219, 221, 0.219);
 
     //FONT VARIABLES
     --primary-font: 'Nunito', sans-serif;
@@ -49,7 +53,6 @@ body {
 
     font-size: 4rem;
     color: white;
-    height: 200rem;
     background-color: var(--primary-background-color);
 }
 

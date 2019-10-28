@@ -5,7 +5,7 @@ import CollapseButton from '../../Components/CollapseButton';
 import './styles.scss';
 
 const sideBar = props => (
-    <nav className='sidebar'>
+    <aside className='sidebar'>
         {/* <CollapseButton/> */}
         {/* <Avatar/> */}
         <div className='brand-name'>
@@ -13,7 +13,7 @@ const sideBar = props => (
         </div>
         <div className='sidebar__left-vertical-bar'></div>
         <SideBarNav/>
-    </nav>
+    </aside>
 );
 
 export default sideBar;

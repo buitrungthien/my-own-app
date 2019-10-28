@@ -1,0 +1,47 @@
+%status {
+    float: right;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+}
+
+.task-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 50%;
+
+    &__low, &__high, &__done {
+        @extend %status;
+    }
+
+    &__low {
+
+        &::before {
+            background-color: var(--low-priority-color);
+        }
+    }
+
+    &__high {
+
+        &::before {
+            background-color: var(--high-priority-color);
+        }
+    }
+
+    &__done {
+
+        &::before {
+            background-color: var(--done-color);
+        }
+    }
+}
