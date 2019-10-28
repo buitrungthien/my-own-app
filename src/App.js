@@ -4,6 +4,7 @@ import SideBar from './Layout/SideBar';
 import Content from './Layout/Content';
 import Statuses from './Components/Statuses';
 import Table from './Components/Table';
+import LEDNumber from './Components/LEDNumber';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Content>
           <Statuses />
           <Table />
+          <LEDNumber />
         </Content>
       </div>
     </div>

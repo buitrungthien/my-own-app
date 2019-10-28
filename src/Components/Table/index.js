@@ -14,7 +14,7 @@ const table = React.memo(props => {
                 <table className='dashboard-table'>
                     <tr>
                         <th>ticket number</th>
-                        <th>description</th>
+                        <th className='text-left'>description</th>
                         <th>priority</th>
                         <th>due-time</th>
                         <th>status</th>
