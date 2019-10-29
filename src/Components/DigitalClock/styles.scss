@@ -1,0 +1,10 @@
+.digital-clock-wrapper {
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > *:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
