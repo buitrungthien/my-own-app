@@ -4,18 +4,15 @@ import { decodeBinaryLEDNumber } from '../../js-helpers';
 
 const LEDNumber = React.memo(props => {
     const [decodedBinary, setDecodedBinary] = useState('0000000');
+    let ledCode = props.number;
 
     useEffect(() => {
-        let ledCode = 0b0000;
-        setInterval(() => {
-            ledCode < 9 ? ledCode = ledCode + 1 : ledCode = 0b0000;
-            setDecodedBinary(decodeBinaryLEDNumber(ledCode));
-        }, 1000);
-    }, []);
+        setDecodedBinary(decodeBinaryLEDNumber(ledCode));
+    }, [ledCode]);
 
     let ledData = [6, 5, 4, 3, 2, 1, 0];
     ledData = ledData.map(i => {
-        const onOffClass = +decodedBinary[6-i] === 1 ? 'off' : 'on';
+        const onOffClass = +decodedBinary[6 - i] === 1 ? 'off' : 'on';
         return (<div className={`led-number__frag-${i} ${onOffClass}`}></div>);
     });
 

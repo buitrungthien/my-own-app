@@ -3,6 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: digital;
+    font-size: 16rem;
+    text-shadow: var(--neon-shadow);
 
     & > *:not(:last-child) {
         margin-right: 2rem;
