@@ -10,28 +10,33 @@ const digitalClock = React.memo(props => {
     let timeoutId2;
 
     useEffect(() => {
-        setTimeout(() => {
-            if (timerState === tomatoTimerStateConstant.start) {
-                setClockColons(prevClockColons => !prevClockColons);
-            }
+        setInterval(() => {
+            setClockColons(prevClockColons => !prevClockColons);
         }, 500);
-    }, [clockColons]);
+    }, []);
 
     useEffect(() => {
-        timeoutId2 = setTimeout(() => {
-            console.log(timerState)
-            if (timerState === tomatoTimerStateConstant.start) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        timeoutId2 = setInterval(() => {
+            if (timerState === tomatoTimerStateConstant.start && tomatoTimer > 0) {
                 setTomatoTimer(prevTimerValue => prevTimerValue - 1);
             }
         }, 1000);
+        return () => { clearInterval(timeoutId2) };
     }, [timerState]);
 
     const clockColonsFlashingStateClass = clockColons ? 'on' : 'off';
 
     const changeTimerStateHandler = (inputState) => () => {
-        if (inputState === tomatoTimerStateConstant.pause) {
-            clearInterval(timeoutId2);
+
+        if (inputState === tomatoTimerStateConstant.stop) {
+            setTomatoTimer(0);
         }
+
+        if (inputState === tomatoTimerStateConstant.start && tomatoTimer === 0) {
+            setTomatoTimer(1500);
+        }
+
         setTimerState(inputState);
     };
 
