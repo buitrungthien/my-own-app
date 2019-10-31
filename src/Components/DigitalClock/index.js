@@ -10,15 +10,15 @@ const digitalClock = React.memo(props => {
     let timeoutId2;
 
     useEffect(() => {
-        setInterval(() => {
+        setTimeout(() => {
             if (timerState === tomatoTimerStateConstant.start) {
                 setClockColons(prevClockColons => !prevClockColons);
             }
         }, 500);
-    }, [timerState]);
+    }, [clockColons]);
 
     useEffect(() => {
-        timeoutId2 = setInterval(() => {
+        timeoutId2 = setTimeout(() => {
             console.log(timerState)
             if (timerState === tomatoTimerStateConstant.start) {
                 setTomatoTimer(prevTimerValue => prevTimerValue - 1);
@@ -29,10 +29,10 @@ const digitalClock = React.memo(props => {
     const clockColonsFlashingStateClass = clockColons ? 'on' : 'off';
 
     const changeTimerStateHandler = (inputState) => () => {
-        setTimerState(inputState);
         if (inputState === tomatoTimerStateConstant.pause) {
             clearInterval(timeoutId2);
         }
+        setTimerState(inputState);
     };
 
     const minutes = Math.floor(tomatoTimer / 60);
