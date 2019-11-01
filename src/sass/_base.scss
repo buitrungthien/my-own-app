@@ -68,10 +68,7 @@ body {
 
     .square-box {
         min-height: 26rem;
-        background-color: var(--lightest-gray);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
 
         &--1 {
             grid-column: 1 / span 2;
