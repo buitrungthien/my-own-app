@@ -10,39 +10,38 @@ const digitalClock = React.memo(props => {
     const [timerState, setTimerState] = useState(tomatoTimerStateConstant.idle);
     const [clockOrTimer, setClockOrTimer] = useState(true);
     const [localTime, setLocalTime] = useState(new Date().toLocaleTimeString());
-    let timeoutId2;
 
     useEffect(() => {
-        const timerID1 = setInterval(() => {
-            setClockColons(prevClockColons => !prevClockColons);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        const semiColonsInterval = setInterval(() => {
+            if (timerState === tomatoTimerStateConstant.start) {
+                setClockColons(prevClockColons => !prevClockColons);
+            }
         }, 500);
-        const timerID2 = setInterval(() => {
+        const localTimeInterval = setInterval(() => {
             setLocalTime(new Date().toLocaleTimeString());
         }, 1000);
 
         return () => {
-            clearInterval(timerID1);
-            clearInterval(timerID2);
+            clearInterval(semiColonsInterval);
+            clearInterval(localTimeInterval);
         };
-    }, []);
+    }, [timerState]);
 
     useEffect(() => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        timeoutId2 = setInterval(() => {
+        const tomatoTimerInterval = setInterval(() => {
             if (timerState === tomatoTimerStateConstant.start && tomatoTimer > 0) {
                 setTomatoTimer(prevTimerValue => prevTimerValue - 1);
             }
         }, 1000);
-        return () => { clearInterval(timeoutId2); };
+        return () => { clearInterval(tomatoTimerInterval); };
     }, [timerState, tomatoTimer]);
 
     const clockColonsFlashingStateClass = clockColons ? 'on' : 'off';
 
     const changeTimerStateHandler = (inputState) => () => {
         setTimerState(inputState);
-        if (inputState === tomatoTimerStateConstant.stop || inputState === tomatoTimerStateConstant.pause) {
-            clearInterval(timeoutId2);
-        }
 
         if (inputState === tomatoTimerStateConstant.stop) {
             setTomatoTimer(0);
